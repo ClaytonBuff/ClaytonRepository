@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sam Givhan for Alabama Senate</title>
+		<link rel="stylesheet" href="Style.css">
+
+
+    <div class="header">
+        <div class="container">
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Issues</a>
+                <a href="#">Get Involved</a>
+                <a href="#">Talk to Sam</a>
+            </nav>
+        </div>
+    </div>
+	</head>
+
+
+	<body>
+		<!-- Create 8 containers with full width photos for my slide show -->
+		<div class="slideshowContainer">
+			<!-- First Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideOne.jpg" style="width:1125px" height="750px">
+				<div class="text">Sam had the honor to be endorsed by the Professional Firefighters of Alabama on Oct 20, 2022.</div>
+			</div>
+
+			<!-- Second Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideTwo.jpg" style="width:1125px" height="750px">
+				<div class="text">Sam was honored to be endorsed by the Alabama Association of Realtors on April 30, 2018.</div>
+			</div>
+
+			<!-- Third Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideThree.png" style="width:1125px" height="750px">
+				<div class="text">Sam had the honor to be endorsed by the National Rifle Association on Nov 3, 2018.</div>
+			</div>	
+
+			<!-- Fifth Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideFive.jpg" style="width:1125px" height="750px">
+				<div class="text">Sam had the honor to be endorsed for state senate by the Alabama Farmers Association's FARMPAC on Oct 25, 2022.</div>
+			</div>
+
+			<!-- Sixth Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideSix.jpg" style="width:1125px" height="750px">
+				<div class="text">Sam had the honor of being endorsed by the National Federation of Independent Business on Nov 1, 2018.</div>
+			</div>
+
+			<!-- Seventh Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideSeven.jpg" style="width:1125px" height="750px">
+				<div class="text">Sam had the honor to be endorsed by the Fraternal Order of Police on Sep 24, 2022.</div>
+			</div>
+
+			<!-- Eighth Slide in the Slideshow -->
+			<div class="mySlides fade">
+				<img src="slideEight.jpg" style="width:1125" height="750">
+				<div class="text">Caption Text</div>
+			</div>
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+		<span class="dot" onclick="currentSlide(5)"></span>
+		<span class="dot" onclick="currentSlide(6)"></span>
+		<span class="dot" onclick="currentSlide(7)"></span>
+		</div>
+
+
+		<h1>About Sam Givhan</h1>
+		<ul>
+			<li> Businessman, Attorney and 7th Generation Alabama Farmer</li>
+			<li> Helped to bring countless jobs to Huntsville and Madison County</li>
+			<li> Bachelors in Finance from the University of Auburn</li>
+			<li> J.D. from the University of Alabama School of Law</li>
+			<li> Senior Vice-Chairman, Alabama Republican Party (2012-2018)</li>
+			<li> Chairman, Madison County Republican Party (2012-2018)</li>
+			<li> Real Estate Attorney, Wilmer & Lee, P.A.</li>
+			<li> Board Member, Huntsville Madison County Builders Association</li>
+			<li> Owner, Houston Land Company and SHG Development</li>
+			<li> Member, Huntsville’s Economic Development Team</li>
+			<li> President of Habitat for Humanity of Madison County (2012-2018)</li>
+			<li> Member, Huntsville Rotary Club</li>
+		</ul>
+
+		<h1>Committee Assignments</h1>
+		<ul>
+			<li> Chairman – Madison County Local Legislation</li>
+			<li> Vice Chairman - Judiciary Committee</li>
+			<li> Member – Confirmations Committee</li>
+			<li> Member - Healthcare Committee</li>
+			<li> Member - Joint Legislative Committee On Homeland Security Oversight</li>
+			<li> Member - Joint Transportation Committee</li>
+			<li> Member- Veterans, Military Affairs and Public Safety</li>
+			<li> Member- Rules Committee</li>
+			<li> Member- Finance and Taxation General Fund</li>
+			<li> Member- Fiscal Responsibility and Economic Development</li>
+		</ul>
+			
+		<p>Sam is married to Heather King Givhan, and the father of six children: Jacob, Anderson, Sarah Beth, Mary Katherine, Houston, and Bennett.  The Givhans are members of  Whitesburg Baptist Church. </p>
+		</p>Get involved!</p>
+		<p>Paid for by Committee to Elect Sam Givhan, 100 Washington Street, Huntsville, AL 35801</p>
+			
+		<img src="Family.png">
+
+		<div class="footer">
+			<div class="container"></div>
+				<form action="/action_page.php">
+					<label for="email">Sign up to get updates from Sam:</label>
+					<input type="email" id="email" name="email" size="50">
+					<input type="submit">
+				</form>			
+		</div>
+
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n)
+			{
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n)
+			{
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n)
+			{
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++)
+				{
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++)
+				{
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			}
+	</script>
+	</body>
+</html>
